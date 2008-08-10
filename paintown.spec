@@ -22,8 +22,8 @@ Paintown is an open source fighting game in the same genre as Streets
 of Rage and Teenage Mutant Ninja Turtles.
 
 %description -l pl.UTF-8
-Paintown jest grą zręcznościową tego samego typu co Street of Rage lub Teenage
-Mutant Ninja Turtles.
+Paintown jest grą zręcznościową tego samego typu co Street of Rage
+lub Teenage Mutant Ninja Turtles.
 
 %prep
 %setup -q
