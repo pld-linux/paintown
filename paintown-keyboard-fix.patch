@@ -1,0 +1,25 @@
+--- paintown-3.1.orig/src/util/keyboard.cpp	2008-07-06 18:40:13.000000000 +0200
++++ paintown-3.1/src/util/keyboard.cpp	2008-08-10 10:48:45.000000000 +0200
+@@ -114,14 +114,14 @@
+ const int Keyboard::Key_BACKQUOTE = ::KEY_BACKQUOTE;
+ const int Keyboard::Key_SEMICOLON = ::KEY_SEMICOLON;
+ const int Keyboard::Key_COMMAND = ::KEY_COMMAND;
+-const int Keyboard::Key_UNKNOWN1 = ::KEY_UNKNOWN1;
+-const int Keyboard::Key_UNKNOWN2 = ::KEY_UNKNOWN2;
+-const int Keyboard::Key_UNKNOWN3 = ::KEY_UNKNOWN3;
+-const int Keyboard::Key_UNKNOWN4 = ::KEY_UNKNOWN4;
+-const int Keyboard::Key_UNKNOWN5 = ::KEY_UNKNOWN5;
+-const int Keyboard::Key_UNKNOWN6 = ::KEY_UNKNOWN6;
+-const int Keyboard::Key_UNKNOWN7 = ::KEY_UNKNOWN7;
+-const int Keyboard::Key_UNKNOWN8 = ::KEY_UNKNOWN8;
++const int Keyboard::Key_UNKNOWN1 = 107;
++const int Keyboard::Key_UNKNOWN2 = 108;
++const int Keyboard::Key_UNKNOWN3 = 109;
++const int Keyboard::Key_UNKNOWN4 = 110;
++const int Keyboard::Key_UNKNOWN5 = 111;
++const int Keyboard::Key_UNKNOWN6 = 112;
++const int Keyboard::Key_UNKNOWN7 = 113;
++const int Keyboard::Key_UNKNOWN8 = 114;
+ const int Keyboard::Key_MODIFIERS = ::KEY_MODIFIERS;
+ const int Keyboard::Key_LSHIFT = ::KEY_LSHIFT;
+ const int Keyboard::Key_RSHIFT = ::KEY_RSHIFT;
