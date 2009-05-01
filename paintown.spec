@@ -10,6 +10,8 @@ Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/paintown/%{name}-%{version}.tar.gz
 # Source0-md5:	f4c323e3fa6f2a9065923fe40b559be3
 Patch0:		%{name}-keyboard-fix.patch
+Patch1:		%{name}-stdio.patch
+Patch2:		%{name}-verbose-makefile.patch
 URL:		http://paintown.sourceforge.net
 BuildRequires:	allegro-devel >=4.1
 BuildRequires:	cmake
@@ -34,6 +36,11 @@ Teenage Mutant Ninja Turtles.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+%patch2 -p1
+%{__sed} -i 's@set(CXXFLAGS.*@set(CXXFLAGS="%{rpmcxxflags}")@g' CMakeLists.txt
+RPMCXXFLAGS=$(echo %{rpmcxxflags} | sed "s@ \$@@ ; s@\([^ ]*\)@'\1'@g ; s@ @,@g")
+%{__sed} -i "s@^cppflags = .*@cppflags = [ ${RPMCXXFLAGS} ]@" SConstruct
 
 %build
 mkdir build
