@@ -1,0 +1,11 @@
+--- paintown-3.2-orig/CMakeLists.txt	2009-05-01 10:34:57.756361564 +0200
++++ paintown-3.2/CMakeLists.txt	2009-05-01 10:44:16.132750520 +0200
+@@ -87,6 +87,8 @@
+ 	set(CXXFLAGS "-O2")
+ endif(NOT MSVC)
+ 
++set(CMAKE_VERBOSE_MAKEFILE true)
++
+ add_definitions(${CXXFLAGS})
+ 
+ # allegro
