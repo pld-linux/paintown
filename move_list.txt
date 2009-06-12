@@ -1,0 +1,135 @@
+Legend
+
+    * key up - U
+    * key down - D
+    * key forward - F
+    * key backward - B
+    * key jump - J
+    * key attack1 - A1
+    * key attack2 - A2
+    * key attack3 - A3
+
+Mandy
+    Get item: A1
+    Punch: A1
+    3 hit punch combo: A1, A1, A1
+    Special: A2
+    Roll kick: F, F, A1
+    Jump: J
+    Jump kick: A1
+    Jump punch: D, A1
+
+Maxima
+    Get item: A1
+    Punch: A1
+    Kick: A2
+    3 hit punch combo: A1, A1, A1
+    Special: D, A2
+    Heavy punch: F, F, A1
+    Jump: J
+    Jump kick: A1
+    Jump punch: D, A1
+
+Akuma
+    Get Item: A1
+    Jump: J
+    Kick: A2
+    3 hit kick combo: A2, A2, A2
+    Elbow: F, A1
+    3 hit close punch combo: F, A1, A1, A1
+    Punch: A1
+    3 hit punch combo: A1, A1, A1
+    Haddoken: D, F, A1
+    Super haddoken: D, F, D, F, A1
+    Dragon punch: F, D, F, A1
+    Jump punch: A1
+    Jump kick: A2
+    Spin kick: D, B, A2
+
+Ryu
+    Get Item: A1
+    Jump: J
+    Punch: A1
+    3 hit punch combo: A1, A1, A1
+    Kick: A2
+    3 hit kick combo: A2, A2, A2
+    Spin kick: D, B, A2
+    Shoryuken: F, D, F, A1
+    Haddoken: D, F, A1
+    Super haddoken: D, F, D, F, A1
+    Jump Punch: A1
+    Jump Kick: A2
+
+Kula
+    Get Item: A1
+    Punch: A1
+    3 hit punch combo: A1, A1, A1
+    Special: A2
+    Kiss of death: F, F, A1
+    Jump: J
+    Jump kick: A1
+    Jump punch: D, A1
+
+Donatello
+    Get Item: A1
+    Kick: F, A1
+    3 hit combo: A1, A1, A1
+    Staff Twirl: F, F, A2
+    Jump: J
+    Jump kick: A2
+    Jump punch: A1
+
+Goku
+    Get Item: A1
+    Kick combo: A2, A2
+    3 hit combo: A1, A1, A1
+    Kamayamaya: F, A3, F, A3
+    Jump: J
+    Jump kick: A2
+    Jump punch: A1
+    Special: A3, A3
+
+Kagetsura
+    Get Item: A1
+    Punch: A1
+    Punch/kick combo: A1, A1, A1, A1
+    Sword combo: A2 A2
+    Sword chop: F, F, A2
+    Jump: J
+    Throw: B, A1
+
+Venom
+    Get Item: A1
+    Punch: A1
+    Eat: F, F, A2
+    Punch/tounge whip combo: A1 A1 A1
+    Jump: J
+    Jump punch: A1
+    Jump kick: A2
+    Swirl: D, A1
+
+Blanka
+    Get Item: A1
+    Backflip: B, A2
+    Claw: A1
+    Claw combo: A1, A1, A1
+    Kick combo: A2, A2, A2
+    Uppercut: F, A1
+    Jump: J
+    Jump claw: A1
+    Jump kick: A2
+    Special: A3, A3
+    Bite(while grabbing): A1
+
+Wolverine
+    Get Item: A1
+    Jab: F, A1
+    Claw combo: A1, A1, A1, A1
+    Kick Combo: A2, A2, A2
+    Jump slash: F, F, A1
+    Special: A3, A3
+    Jump: J
+    Jump claw: A1
+    Jump kick: A2
+    Taunt: A3, A1
+
