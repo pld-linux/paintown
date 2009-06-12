@@ -4,11 +4,12 @@ Summary(hu.UTF-8):	Paintown - egy nyílt forrású verekedős játék a Streets 
 Summary(pl.UTF-8):	Paintown - gra zręcznościowa podobna do Streets of Rage lub Teenage Mutants inja Turtles
 Name:		paintown
 Version:	3.2
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/paintown/%{name}-%{version}.tar.gz
 # Source0-md5:	f4c323e3fa6f2a9065923fe40b559be3
+Source1:	move_list.txt
 Patch0:		%{name}-keyboard-fix.patch
 Patch1:		%{name}-stdio.patch
 Patch2:		%{name}-string.patch
@@ -20,6 +21,7 @@ BuildRequires:	freetype-devel
 BuildRequires:	libpng-devel
 BuildRequires:	python-devel
 BuildRequires:	zlib-devel
+Requires:	allegro-alsa
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -57,6 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 cp build/bin/paintown .
 ./install.sh -d $RPM_BUILD_ROOT%{_datadir}/%{name} -b $RPM_BUILD_ROOT%{_bindir}
+cp %{SOURCE1} .
 sed -i "s|$RPM_BUILD_ROOT||g" $RPM_BUILD_ROOT%{_bindir}/%{name}
 
 
@@ -65,7 +68,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README TODO scripting.txt doc/character.txt
+%doc README TODO scripting.txt doc/character.txt move_list.txt
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/%{name}
 %attr(755,root,root) %{_datadir}/%{name}/%{name}-bin
