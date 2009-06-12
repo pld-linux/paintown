@@ -18,3 +18,23 @@
  
  OptionLives::OptionLives( Token * token ) throw( LoadException ):
  MenuOption(token, AdjustableOption),
+--- paintown-3.2-orig/src/menu/option_npc_buddies.cpp	2009-05-01 10:35:01.319250692 +0200
++++ paintown-3.2/src/menu/option_npc_buddies.cpp	2009-06-12 09:43:52.976937398 +0200
+@@ -4,6 +4,7 @@
+ #include "menu/menu.h"
+ #include "menu/menu_global.h"
+ #include "globals.h"
++#include <stdio.h>
+ 
+ OptionNpcBuddies::OptionNpcBuddies( Token * token ) throw( LoadException ):
+ MenuOption(token, AdjustableOption),
+--- paintown-3.2-orig/src/globals.h	2009-05-01 10:35:01.885710068 +0200
++++ paintown-3.2/src/globals.h	2009-06-12 09:53:41.830647941 +0200
+@@ -3,6 +3,7 @@
+ 
+ #include <ostream>
+ #include <string>
++#include <stdio.h>
+ 
+ class Bitmap;
+ 
