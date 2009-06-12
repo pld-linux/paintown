@@ -47,6 +47,7 @@ RPMCXXFLAGS=$(echo %{rpmcxxflags} | sed "s@ \$@@ ; s@\([^ ]*\)@'\1'@g ; s@ @,@g"
 install -d build
 cd build
 %cmake \
+	%{?debug:-DCMAKE_VERBOSE_MAKEFILE=1} \
 	..
 
 %{__make}
