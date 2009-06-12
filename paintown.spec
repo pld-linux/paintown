@@ -67,6 +67,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README TODO scripting.txt doc/character.txt
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_datadir}/%{name}/%{name}-bin
 %dir %{_datadir}/%{name}
-%{_datadir}/%{name}/*
+%attr(755,root,root) %{_datadir}/%{name}/%{name}-bin
+%{_datadir}/%{name}/data
