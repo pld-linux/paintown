@@ -4,12 +4,13 @@ Summary(hu.UTF-8):	Paintown - egy nyílt forrású verekedős játék a Streets 
 Summary(pl.UTF-8):	Paintown - gra zręcznościowa podobna do Streets of Rage lub Teenage Mutants inja Turtles
 Name:		paintown
 Version:	3.2
-Release:	3
+Release:	4
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/paintown/%{name}-%{version}.tar.gz
 # Source0-md5:	f4c323e3fa6f2a9065923fe40b559be3
 Source1:	move_list.txt
+Source2:	%{name}.desktop
 Patch0:		%{name}-keyboard-fix.patch
 Patch1:		%{name}-stdio.patch
 Patch2:		%{name}-string.patch
@@ -61,6 +62,8 @@ cp build/bin/paintown .
 ./install.sh -d $RPM_BUILD_ROOT%{_datadir}/%{name} -b $RPM_BUILD_ROOT%{_bindir}
 cp %{SOURCE1} .
 sed -i "s|$RPM_BUILD_ROOT||g" $RPM_BUILD_ROOT%{_bindir}/%{name}
+install -d $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}
 
 
 %clean
@@ -73,3 +76,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/%{name}
 %attr(755,root,root) %{_datadir}/%{name}/%{name}-bin
 %{_datadir}/%{name}/data
+%{_desktopdir}/%{name}.desktop
