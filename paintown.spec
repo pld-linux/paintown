@@ -20,6 +20,7 @@ BuildRequires:	cmake
 BuildRequires:	dumb-devel
 BuildRequires:	freetype-devel
 BuildRequires:	libpng-devel
+BuildRequires:	libstdc++-devel
 BuildRequires:	python-devel
 BuildRequires:	zlib-devel
 Requires:	allegro-alsa
