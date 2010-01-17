@@ -1,4 +1,13 @@
 # TODO: optflags
+
+%if "%{pld_release}" == "ti"
+%bcond_without	java_sun	# build with gcj
+%else
+%bcond_with	java_sun	# build with java-sun
+%endif
+
+%include	/usr/lib/rpm/macros.java
+
 Summary:	Paintown - an open source fighting game in the same genre as Streets of Rage and Teenage Mutant Ninja Turtles
 Summary(hu.UTF-8):	Paintown - egy nyílt forrású verekedős játék a Streets of Rage és a Teenage Mutant Ninja Turtles nyomdokain
 Summary(pl.UTF-8):	Paintown - gra zręcznościowa podobna do Streets of Rage lub Teenage Mutants inja Turtles
@@ -21,11 +30,18 @@ BuildRequires:	ant
 BuildRequires:	cmake
 BuildRequires:	dumb-devel
 BuildRequires:	freetype-devel
+%{!?with_java_sun:BuildRequires:	java-gcj-compat-devel}
+%{?with_java_sun:BuildRequires:	java-sun}
+BuildRequires:	jpackage-utils
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	python-devel
+BuildRequires:	rpm >= 4.4.9-56
+BuildRequires:	rpm-javaprov
+BuildRequires:	rpmbuild(macros) >= 1.300
 BuildRequires:	zlib-devel
 Requires:	allegro-alsa
+Requires:	jpackage-utils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -43,7 +59,7 @@ Teenage Mutant Ninja Turtles.
 %package editor
 Summary:	Paintown editor
 Group:		X11/Applications/Games
-Requires:	java-sun-jre-X11
+Requires:	jre-X11
 
 %description editor
 Paintown editor.
