@@ -84,6 +84,7 @@ cd build
 
 cd ../editor
 ant
+sed -i '1i#!%{_bindir}/java -jar' editor.jar
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -95,9 +96,7 @@ sed -i "s|$RPM_BUILD_ROOT||g" $RPM_BUILD_ROOT%{_bindir}/%{name}
 install -d $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}
 
-install editor/editor.jar $RPM_BUILD_ROOT%{_datadir}/%{name}
-install %{SOURCE3} $RPM_BUILD_ROOT%{_bindir}
-
+install editor/editor.jar $RPM_BUILD_ROOT%{_bindir}/%{name}-editor
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -114,4 +113,3 @@ rm -rf $RPM_BUILD_ROOT
 %files editor
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/%{name}-editor
-%{_datadir}/%{name}/editor.jar
