@@ -12,12 +12,12 @@ Summary:	Paintown - an open source fighting game in the same genre as Streets of
 Summary(hu.UTF-8):	Paintown - egy nyílt forrású verekedős játék a Streets of Rage és a Teenage Mutant Ninja Turtles nyomdokain
 Summary(pl.UTF-8):	Paintown - gra zręcznościowa podobna do Streets of Rage lub Teenage Mutants inja Turtles
 Name:		paintown
-Version:	3.2
-Release:	5
+Version:	3.3.1
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/paintown/%{name}-%{version}.tar.gz
-# Source0-md5:	f4c323e3fa6f2a9065923fe40b559be3
+# Source0-md5:	61ae18b78ff4ca1caf287ddf7f8e0bf9
 Source1:	move_list.txt
 Source2:	%{name}.desktop
 Source3:	%{name}-editor
@@ -67,7 +67,7 @@ Paintown editor.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
+# %patch1 -p1
 %patch2 -p1
 %{__sed} -i 's@set(CXXFLAGS.*@set(CXXFLAGS="%{rpmcxxflags}")@g' CMakeLists.txt
 RPMCXXFLAGS=$(echo %{rpmcxxflags} | sed "s@ \$@@ ; s@\([^ ]*\)@'\1'@g ; s@ @,@g")
