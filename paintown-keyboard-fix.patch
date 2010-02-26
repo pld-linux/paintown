@@ -1,5 +1,5 @@
---- paintown-3.1.orig/src/util/keyboard.cpp	2008-07-06 18:40:13.000000000 +0200
-+++ paintown-3.1/src/util/keyboard.cpp	2008-08-10 10:48:45.000000000 +0200
+--- paintown-3.1.orig/src/input/keyboard.cpp	2008-07-06 18:40:13.000000000 +0200
++++ paintown-3.1/src/input/keyboard.cpp	2008-08-10 10:48:45.000000000 +0200
 @@ -114,14 +114,14 @@
  const int Keyboard::Key_BACKQUOTE = ::KEY_BACKQUOTE;
  const int Keyboard::Key_SEMICOLON = ::KEY_SEMICOLON;

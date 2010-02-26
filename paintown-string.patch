@@ -1,11 +1,10 @@
---- paintown-3.2-orig/src/game.cpp	2009-05-01 10:35:02.005708732 +0200
-+++ paintown-3.2/src/game.cpp	2009-06-12 09:59:45.754198818 +0200
-@@ -112,7 +112,7 @@
+--- paintown-3.3.1-orig/src/util/funcs.cpp	2010-02-26 17:16:38.434373896 +0100
++++ paintown-3.3.1/src/util/funcs.cpp	2010-02-26 17:19:57.494169441 +0100
+@@ -3,6 +3,7 @@
+ #include <allegro.h>
+ #include <vector>
+ #include <string>
++#include <cstring>
  
- static string findNextFile( const char * name ){
- 	char buf[ 128 ];
--	char * extension = strchr( name, '.' );
-+	char * extension = strdup( strchr( name, '.' ) );
- 	char first[ 128 ];
- 	strncpy( first, name, extension - name );
- 	first[ extension - name ] = '\0';
+ #ifndef WINDOWS
+ #include <unistd.h>
