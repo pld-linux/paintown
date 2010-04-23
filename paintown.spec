@@ -1,11 +1,5 @@
 # TODO: optflags
 
-%if "%{pld_release}" == "ti"
-%bcond_without	java_sun	# build with gcj
-%else
-%bcond_with	java_sun	# build with java-sun
-%endif
-
 %include	/usr/lib/rpm/macros.java
 
 Summary:	Paintown - an open source fighting game in the same genre as Streets of Rage and Teenage Mutant Ninja Turtles
@@ -30,13 +24,11 @@ BuildRequires:	ant
 BuildRequires:	cmake
 BuildRequires:	dumb-devel
 BuildRequires:	freetype-devel
-%{!?with_java_sun:BuildRequires:	java-gcj-compat-devel}
-%{?with_java_sun:BuildRequires:	java-sun}
+BuildRequires:	jdk
 BuildRequires:	jpackage-utils
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	python-devel
-BuildRequires:	rpm >= 4.4.9-56
 BuildRequires:	rpm-javaprov
 BuildRequires:	rpmbuild(macros) >= 1.300
 BuildRequires:	zlib-devel
