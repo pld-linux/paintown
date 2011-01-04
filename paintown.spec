@@ -6,18 +6,15 @@ Summary:	Paintown - an open source fighting game in the same genre as Streets of
 Summary(hu.UTF-8):	Paintown - egy nyílt forrású verekedős játék a Streets of Rage és a Teenage Mutant Ninja Turtles nyomdokain
 Summary(pl.UTF-8):	Paintown - gra zręcznościowa podobna do Streets of Rage lub Teenage Mutants inja Turtles
 Name:		paintown
-Version:	3.3.1
-Release:	3
+Version:	3.4.0
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/paintown/%{name}-%{version}.tar.gz
-# Source0-md5:	61ae18b78ff4ca1caf287ddf7f8e0bf9
+Source0:	http://downloads.sourceforge.net/paintown/%{name}-%{version}.tar.gz
+# Source0-md5:	f1d49ffc3149b545d95a57f99570331f
 Source1:	move_list.txt
 Source2:	%{name}.desktop
 Source3:	%{name}-editor
-Patch0:		%{name}-keyboard-fix.patch
-Patch1:		%{name}-stdio.patch
-Patch2:		%{name}-string.patch
 URL:		http://paintown.sourceforge.net
 BuildRequires:	allegro-devel >=4.1
 BuildRequires:	ant
@@ -58,9 +55,6 @@ Paintown editor.
 
 %prep
 %setup -q
-%patch0 -p1
-# %patch1 -p1
-%patch2 -p1
 %{__sed} -i 's@set(CXXFLAGS.*@set(CXXFLAGS="%{rpmcxxflags}")@g' CMakeLists.txt
 RPMCXXFLAGS=$(echo %{rpmcxxflags} | sed "s@ \$@@ ; s@\([^ ]*\)@'\1'@g ; s@ @,@g")
 %{__sed} -i "s@^cppflags = .*@cppflags = [ ${RPMCXXFLAGS} ]@" SConstruct
@@ -90,6 +84,9 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}
 
 install editor/editor.jar $RPM_BUILD_ROOT%{_bindir}/%{name}-editor
 
+install -d $RPM_BUILD_ROOT%{_libdir}
+install build/lib/*module* $RPM_BUILD_ROOT%{_libdir}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -101,6 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_datadir}/%{name}/%{name}-bin
 %{_datadir}/%{name}/data
 %{_desktopdir}/%{name}.desktop
+%{_libdir}/*.so
 
 %files editor
 %defattr(644,root,root,755)
