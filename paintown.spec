@@ -6,12 +6,12 @@ Summary:	Paintown - an open source fighting game in the same genre as Streets of
 Summary(hu.UTF-8):	Paintown - egy nyílt forrású verekedős játék a Streets of Rage és a Teenage Mutant Ninja Turtles nyomdokain
 Summary(pl.UTF-8):	Paintown - gra zręcznościowa podobna do Streets of Rage lub Teenage Mutants inja Turtles
 Name:		paintown
-Version:	3.4.0
+Version:	3.5.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	http://downloads.sourceforge.net/paintown/%{name}-%{version}.tar.gz
-# Source0-md5:	f1d49ffc3149b545d95a57f99570331f
+# Source0-md5:	58de3c1cd8aea7e3117ec97f5e169a23
 Source1:	move_list.txt
 Source2:	%{name}.desktop
 Source3:	%{name}-editor
